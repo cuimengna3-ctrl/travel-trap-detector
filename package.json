@@ -77,11 +77,14 @@
   "devDependencies": {
     "@lark-apaas/coding-preset-vite-react": "^1.0.25",
     "@lark-apaas/coding-presets-react": "^0.1.0",
+    "@rolldown/binding-win32-x64-msvc": "^1.2.12",
+    "@tailwindcss/oxide-win32-x64-msvc": "^4.3.3",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "concurrently": "^9",
     "eslint": "^9",
+    "lightningcss-win32-x64-msvc": "^1.33.0",
     "typescript": "~5.9",
     "vite": "^8"
   },

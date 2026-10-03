@@ -1,0 +1,27 @@
+{
+  "id": "travel_itinerary_web_crawler_1",
+  "pluginKey": "@official-plugins/web-crawler",
+  "pluginVersion": "1.0.10",
+  "name": "旅游行程网页内容爬取",
+  "description": "爬取携程、马蜂窝、抖音、小红书等平台的旅游行程/产品链接页面内容，提取行程描述、价格、包含项目等文本信息，用于AI避坑检测分析。",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "travel_page_url": {
+        "type": "string",
+        "description": "旅游行程/产品网页链接（支持携程、马蜂窝、抖音、小红书等平台）"
+      }
+    },
+    "required": [
+      "travel_page_url"
+    ]
+  },
+  "formValue": {
+    "processMode": "extract_text",
+    "url": "{{input.travel_page_url}}"
+  },
+  "createdAt": 1790844930865,
+  "updatedAt": 1790844930865,
+  "createdBy": 7524219092488814596
+}

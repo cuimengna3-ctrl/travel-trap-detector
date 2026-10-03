@@ -1,0 +1,31 @@
+{
+  "id": "physique_test_result_generate_1",
+  "pluginKey": "@official-plugins/ai-text-generate",
+  "pluginVersion": "1.0.21",
+  "name": "体质测试结果生成",
+  "description": "根据用户答题得分，生成被坑体质测试结果，包括头衔、人设梗文案、击败百分比，风格轻松有趣适合社交分享",
+  "icon": "",
+  "paramsSchema": {
+    "properties": {
+      "test_score": {
+        "type": "string",
+        "description": "用户体质测试答题得分"
+      }
+    },
+    "required": [
+      "test_score"
+    ],
+    "type": "object"
+  },
+  "formValue": {
+    "modelID": "2015",
+    "modelParams": {
+      "maxTokens": 8192,
+      "temperature": 0.5
+    },
+    "prompt": "你是一位趣味测试内容创作专家，擅长生成轻松有趣、适合社交分享的测试结果。\n\n请根据用户的被坑体质测试得分，生成对应的测试结果：\n用户得分：{{input.test_score}}\n\n输出要求：\n1. 生成3个部分的内容：\n   - 头衔：根据得分高低生成有趣的头衔，例如高分对应\"避坑大师\"、\"反套路达人\"，低分对应\"被坑体质满级\"、\"行走的冤种\"等\n   - 人设梗文案：一句符合头衔的幽默梗，接地气有网感，适合发朋友圈\n   - 击败百分比：根据得分计算合理的击败全国用户百分比，范围在0-100%之间\n\n2. 风格要求：\n   - 轻松幽默，使用网络流行语，符合年轻人社交分享习惯\n   - 内容积极正向，避免负面词汇\n   - 整体长度控制在100字以内，精炼有趣\n\n3. 输出格式：\n   直接输出JSON格式，包含title（头衔）、slogan（人设梗文案）、defeat_rate（击败百分比，带%符号）三个字段，不需要其他额外内容。"
+  },
+  "createdAt": 1790843421413,
+  "updatedAt": 1790843421413,
+  "createdBy": 7524219092488814596
+}

@@ -1,0 +1,31 @@
+{
+  "id": "travel_risk_report_generate_1",
+  "pluginKey": "@official-plugins/ai-text-generate",
+  "pluginVersion": "1.0.21",
+  "name": "行程风险报告生成",
+  "description": "基于识别出的出行风险套路列表，流式生成完整的行程风险报告，包含一句话结论、风险点说明和应对建议，输出markdown格式。",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "risk_routine_list": {
+        "type": "string",
+        "description": "识别出的出行风险套路列表"
+      }
+    },
+    "required": [
+      "risk_routine_list"
+    ]
+  },
+  "formValue": {
+    "prompt": "你是一位专业的出行安全分析专家，擅长基于风险点生成清晰实用的行程风险报告。\n\n请根据以下识别出的出行风险套路列表，生成一份完整的行程风险报告：\n风险套路列表：{{input.risk_routine_list}}\n\n报告内容要求：\n1. 一句话结论：开头用简洁的语言总结整体风险等级和核心提示，不超过50字。\n2. 风险点详情：逐条列出每个风险点，每个风险点包含两部分：\n   - 识别说明：清晰描述该风险的表现形式、常见场景和识别要点\n   - 应对建议：给出具体可操作的防范措施和处理方法\n3. 整体建议：最后给出3-5条通用的出行安全注意事项\n\n输出格式要求：\n- 严格使用Markdown格式\n- 标题层级清晰，使用## 二级标题、### 三级标题结构\n- 列表使用有序或无序列表展示，便于阅读\n- 内容专业严谨，语言简洁明了，避免冗余表述\n- 不要包含任何多余的解释性文字，直接输出报告内容",
+    "modelID": "2015",
+    "modelParams": {
+      "maxTokens": 8192,
+      "temperature": 0.5
+    }
+  },
+  "createdAt": 1790843420161,
+  "updatedAt": 1790843420161,
+  "createdBy": 7524219092488814596
+}

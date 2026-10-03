@@ -1,0 +1,27 @@
+{
+  "id": "destination_pitfall_search_summary_1",
+  "pluginKey": "@official-plugins/ai-search-summary",
+  "pluginVersion": "1.0.13",
+  "name": "目的地避坑信息检索",
+  "description": "对内置知识库未覆盖的旅游目的地，实时检索并汇总该目的地的高频踩坑点和避坑注意事项，信息真实可追溯，输出按置信度排序的避坑建议清单",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "destination": {
+        "type": "string",
+        "description": "需要检索避坑信息的旅游目的地名称"
+      }
+    },
+    "required": [
+      "destination"
+    ]
+  },
+  "formValue": {
+    "instruction": "你是专业的旅游避坑信息分析专家。请基于搜索到的信息，汇总该目的地的高频踩坑点和避坑注意事项，要求信息真实可追溯，所有内容必须明确标注信息来源，输出按置信度从高到低排序的避坑建议清单，每个建议包含风险描述、发生场景、避坑措施三个部分。",
+    "query": "{{input.destination}} 旅游 踩坑 避坑 注意事项 常见陷阱 游客反馈"
+  },
+  "createdAt": 1790862890837,
+  "updatedAt": 1790862890837,
+  "createdBy": 7524219092488814596
+}

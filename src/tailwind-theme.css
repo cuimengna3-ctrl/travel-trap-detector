@@ -1,0 +1,292 @@
+:root {
+  --button-outline: rgba(0, 0, 0, 1);
+  --badge-outline: rgba(0, 0, 0, 1);
+
+  --opaque-button-border-intensity: -8;
+
+  --elevate-1: rgba(0, 0, 0, 0.15);
+  --elevate-2: rgba(0, 0, 0, 0.3);
+
+  /* 波普艺术 - 美式漫画/丝网印刷风格 */
+  --background: hsl(48 100% 50%);
+  --foreground: hsl(0 0% 0%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 0%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 0%);
+  --primary: hsl(48 100% 50%);
+  --primary-foreground: hsl(0 0% 0%);
+  --secondary: hsl(0 0% 100%);
+  --secondary-foreground: hsl(0 0% 0%);
+  --muted: hsl(60 100% 97%);
+  --muted-foreground: hsl(0 0% 30%);
+  --accent: hsl(4 100% 59%);
+  --accent-foreground: hsl(0 0% 100%);
+  --info: hsl(213 100% 50%);
+  --info-foreground: hsl(0 0% 100%);
+  --destructive: hsl(4 100% 59%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --success: hsl(132 65% 57%);
+  --success-foreground: hsl(0 0% 0%);
+  --warning: hsl(48 100% 60%);
+  --warning-foreground: hsl(0 0% 0%);
+  --border: hsl(0 0% 0%);
+  --input: hsl(0 0% 0%);
+  --ring: hsl(0 0% 0%);
+
+  --chart-1: hsl(4 100% 59%);
+  --chart-2: hsl(132 65% 57%);
+  --chart-3: hsl(213 100% 50%);
+  --chart-4: hsl(48 100% 50%);
+  --chart-5: hsl(280 60% 60%);
+
+  --sidebar: hsl(48 100% 88%);
+  --sidebar-foreground: hsl(0 0% 0%);
+  --sidebar-primary: hsl(4 100% 59%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(132 65% 57%);
+  --sidebar-accent-foreground: hsl(0 0% 0%);
+  --sidebar-border: hsl(0 0% 0%);
+  --sidebar-ring: hsl(0 0% 0%);
+
+  --primary-border: hsl(from hsl(48 100% 50%) h s calc(l - 15%));
+  --secondary-border: hsl(from hsl(0 0% 100%) h s calc(l - 10%));
+  --destructive-border: hsl(from hsl(4 100% 59%) h s calc(l - 10%));
+  --accent-border: hsl(from hsl(4 100% 59%) h s calc(l - 10%));
+  --muted-border: hsl(from hsl(60 100% 97%) h s calc(l - 5%));
+
+  --font-sans: 'Noto Sans SC', system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-display: 'Bangers', 'Noto Sans SC', system-ui, 'PingFang SC', 'Microsoft YaHei', cursive;
+  --font-serif: 'Noto Sans SC', Georgia, serif;
+  --font-mono: 'Noto Sans SC', monospace;
+
+  --radius: 2.5rem;
+  --shadow-x: 12px;
+  --shadow-y: 12px;
+  --shadow-blur: 0px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 1;
+  --shadow-color: #000000;
+
+  /* 波普硬阴影层级 */
+  --shadow-2xs: 2px 2px 0px 0px hsl(0 0% 0% / 1);
+  --shadow-xs: 4px 4px 0px 0px hsl(0 0% 0% / 1);
+  --shadow-sm: 6px 6px 0px 0px hsl(0 0% 0% / 1);
+  --shadow: 8px 8px 0px 0px hsl(0 0% 0% / 1);
+  --shadow-md: 12px 12px 0px 0px hsl(0 0% 0% / 1);
+  --shadow-lg: 16px 16px 0px 0px hsl(0 0% 0% / 1);
+  --shadow-xl: 20px 20px 0px 0px hsl(0 0% 0% / 1);
+  --shadow-2xl: 24px 24px 0px 0px hsl(48 100% 60% / 1);
+
+  --tracking-normal: 0.02em;
+  --spacing: 0.25rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+
+  --radius-sm: 1rem;
+  --radius-md: 2rem;
+  --radius-lg: 2.5rem;
+  --radius-xl: 4rem;
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+}
+
+@layer utilities {
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: var(--muted-foreground);
+    pointer-events: none;
+  }
+
+  .no-default-hover-elevate {}
+  .no-default-active-elevate {}
+
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -2px;
+  }
+
+  :where(.hover-elevate:not(.no-default-hover-elevate)),
+  :where(.active-elevate:not(.no-default-active-elevate)),
+  :where(.hover-elevate-2:not(.no-default-hover-elevate)),
+  :where(.active-elevate-2:not(.no-default-active-elevate)) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -2px;
+  }
+
+  /* 波普风格工具类 */
+  .pop-font {
+    font-family: var(--font-display);
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .pop-card {
+    border-radius: 2.5rem;
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--foreground);
+    background-color: var(--card);
+    box-shadow: var(--shadow-md);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .pop-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .pop-button {
+    border-radius: 9999px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: var(--foreground);
+    background-color: var(--primary);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--foreground);
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .pop-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+  }
+
+  .pop-button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+  }
+
+  .pop-tilt-1 { transform: rotate(-1deg); }
+  .pop-tilt-2 { transform: rotate(1deg); }
+  .pop-tilt-3 { transform: rotate(-2deg); }
+
+  .pop-text-shadow {
+    text-shadow: none;
+  }
+
+  /* 半色调圆点纹理 (Ben-Day dots) */
+  .pop-halftone {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+    background-size: 20px 20px;
+  }
+
+  .pop-halftone-light {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 2px, transparent 2px);
+    background-size: 20px 20px;
+  }
+
+  /* 波普动画曲线 */
+  .pop-ease {
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}
